@@ -24,13 +24,16 @@
 }
 
 - (void)makeViewReactive {
+    // BInding textfields to the model
     [self.name.rac_textSignal subscribe:RACBind(self.myModel.name)];
     [self.email.rac_textSignal subscribe:RACBind(self.myModel.email)];
     [self.username.rac_textSignal subscribe:RACBind(self.myModel.username)];
     [self.github.rac_textSignal subscribe:RACBind(self.myModel.github)];
+    // Binding actions
     [[self.signup rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         NSLog(@"Pressed");
     }];
+    // Enabling the signup button
     RAC(self.signup, enabled) = [RACSignal combineLatest:@[
                                     self.name.rac_textSignal,
                                     self.email.rac_textSignal,
