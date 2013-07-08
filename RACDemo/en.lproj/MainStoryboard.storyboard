@@ -61,6 +61,7 @@
                         <outlet property="email" destination="bzw-qd-AHS" id="C17-Lz-dDt"/>
                         <outlet property="github" destination="YfQ-YL-yAR" id="A7R-3e-HrV"/>
                         <outlet property="name" destination="MNw-MA-hCr" id="cwS-ru-Ly4"/>
+                        <outlet property="signup" destination="eNb-Oi-sSL" id="LO1-Km-xof"/>
                         <outlet property="username" destination="pyz-ms-dju" id="ZE5-sf-Ltf"/>
                     </connections>
                 </viewController>
