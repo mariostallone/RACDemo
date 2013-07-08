@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextField *name;
+@property (weak, nonatomic) IBOutlet UITextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *github;
 
 @end

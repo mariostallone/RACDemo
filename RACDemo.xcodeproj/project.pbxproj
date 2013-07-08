@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CFBD0DE8CEB403DA0CF9607 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF50163FA249B2A96AA4F8 /* libPods.a */; };
 		AC1EDAC4178A881300301D5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1EDAC3178A881300301D5F /* UIKit.framework */; };
 		AC1EDAC6178A881300301D5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1EDAC5178A881300301D5F /* Foundation.framework */; };
 		AC1EDAC8178A881300301D5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1EDAC7178A881300301D5F /* CoreGraphics.framework */; };
@@ -18,9 +19,12 @@
 		AC1EDADA178A881300301D5F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1EDAD9178A881300301D5F /* Default-568h@2x.png */; };
 		AC1EDADD178A881300301D5F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1EDADB178A881300301D5F /* MainStoryboard.storyboard */; };
 		AC1EDAE0178A881300301D5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1EDADF178A881300301D5F /* ViewController.m */; };
+		AC1EDAEF178A8A7D00301D5F /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1EDAEE178A8A7D00301D5F /* MyModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CB264C20CD1498F893FCB1E /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		72CF50163FA249B2A96AA4F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1EDAC0178A881300301D5F /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1EDAC3178A881300301D5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AC1EDAC5178A881300301D5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +41,8 @@
 		AC1EDADC178A881300301D5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AC1EDADE178A881300301D5F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AC1EDADF178A881300301D5F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC1EDAED178A8A7D00301D5F /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
+		AC1EDAEE178A8A7D00301D5F /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 				AC1EDAC4178A881300301D5F /* UIKit.framework in Frameworks */,
 				AC1EDAC6178A881300301D5F /* Foundation.framework in Frameworks */,
 				AC1EDAC8178A881300301D5F /* CoreGraphics.framework in Frameworks */,
+				7CFBD0DE8CEB403DA0CF9607 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 				AC1EDAC9178A881300301D5F /* RACDemo */,
 				AC1EDAC2178A881300301D5F /* Frameworks */,
 				AC1EDAC1178A881300301D5F /* Products */,
+				3CB264C20CD1498F893FCB1E /* Pods/Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +84,7 @@
 				AC1EDAC3178A881300301D5F /* UIKit.framework */,
 				AC1EDAC5178A881300301D5F /* Foundation.framework */,
 				AC1EDAC7178A881300301D5F /* CoreGraphics.framework */,
+				72CF50163FA249B2A96AA4F8 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,6 +98,8 @@
 				AC1EDADE178A881300301D5F /* ViewController.h */,
 				AC1EDADF178A881300301D5F /* ViewController.m */,
 				AC1EDACA178A881300301D5F /* Supporting Files */,
+				AC1EDAED178A8A7D00301D5F /* MyModel.h */,
+				AC1EDAEE178A8A7D00301D5F /* MyModel.m */,
 			);
 			path = RACDemo;
 			sourceTree = "<group>";
@@ -114,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC1EDAE3178A881300301D5F /* Build configuration list for PBXNativeTarget "RACDemo" */;
 			buildPhases = (
+				0784D65DCD2B4F3B89D2DF62 /* Check Pods Manifest.lock */,
 				AC1EDABC178A881300301D5F /* Sources */,
 				AC1EDABD178A881300301D5F /* Frameworks */,
 				AC1EDABE178A881300301D5F /* Resources */,
+				7BFC09B306274D7CA82D1522 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +181,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0784D65DCD2B4F3B89D2DF62 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BFC09B306274D7CA82D1522 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC1EDABC178A881300301D5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -176,6 +222,7 @@
 				AC1EDAD0178A881300301D5F /* main.m in Sources */,
 				AC1EDAD4178A881300301D5F /* AppDelegate.m in Sources */,
 				AC1EDAE0178A881300301D5F /* ViewController.m in Sources */,
+				AC1EDAEF178A8A7D00301D5F /* MyModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +306,7 @@
 		};
 		AC1EDAE4178A881300301D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB264C20CD1498F893FCB1E /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RACDemo/RACDemo-Prefix.pch";
@@ -270,6 +318,7 @@
 		};
 		AC1EDAE5178A881300301D5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB264C20CD1498F893FCB1E /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RACDemo/RACDemo-Prefix.pch";
@@ -298,6 +347,7 @@
 				AC1EDAE5178A881300301D5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
