@@ -24,32 +24,20 @@
 }
 
 - (void)makeViewReactive {
-    [self.name.rac_textSignal subscribeNext:^(NSString *new) {
-        self.myModel.name = new;
-    }];
-    [self.email.rac_textSignal subscribeNext:^(NSString *new) {
-        self.myModel.email = new;
-    }];
-    [self.username.rac_textSignal subscribeNext:^(NSString *new) {
-        self.myModel.username = new;
-    }];
-    [self.github.rac_textSignal subscribeNext:^(NSString *new) {
-        self.myModel.github = new;
-    }];
+    [self.name.rac_textSignal subscribe:RACBind(self.myModel.name)];
+    [self.email.rac_textSignal subscribe:RACBind(self.myModel.email)];
+    [self.username.rac_textSignal subscribe:RACBind(self.myModel.username)];
+    [self.github.rac_textSignal subscribe:RACBind(self.myModel.github)];
     [[self.signup rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         NSLog(@"Pressed");
     }];
-    [[RACCommand commandWithCanExecuteSignal:
-      [RACSignal combineLatest:@[
-                                self.name.rac_textSignal,
-                                self.email.rac_textSignal,
-                                self.username.rac_textSignal]
-                 reduce:^(NSString *name,NSString *email,NSString *username){
-                                return @(name.length>0&&email.length&&username.length);
-                                }]]
-                subscribeNext:^(id x) {
-                                                 
-    }];
+    RAC(self.signup, enabled) = [RACSignal combineLatest:@[
+                                    self.name.rac_textSignal,
+                                    self.email.rac_textSignal,
+                                    self.username.rac_textSignal]
+                                reduce:^(NSString *name,NSString *email,NSString *username){
+                                    return @(name.length>0&&email.length&&username.length);
+                                }];
     
 }
 
